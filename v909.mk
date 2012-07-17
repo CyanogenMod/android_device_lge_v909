@@ -19,6 +19,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.startablet.rc:root/init.startablet.rc \
     $(LOCAL_PATH)/init.startablet.usb.rc:root/init.startablet.usb.rc \
     $(LOCAL_PATH)/ueventd.startablet.rc:root/ueventd.startablet.rc \
+    $(LOCAL_PATH)/fstab.v909:root/fstab.v909 \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
@@ -78,7 +79,10 @@ PRODUCT_PACKAGES += \
     libsecureclock \
     screencap \
     hwprops \
-    com.android.future.usb.accessory
+    com.android.future.usb.accessory \
+    e2fsck \
+    make_ext4fs \
+    setup_fs
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
