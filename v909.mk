@@ -13,13 +13,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media_profiles.xml:system/etc/media_profiles.xml \
     $(LOCAL_PATH)/egl.cfg:system/lib/egl/egl.cfg \
     $(LOCAL_PATH)/prebuilt/rild:system/bin/rild \
-    $(LOCAL_PATH)/wpa_supplicant.conf:data/misc/wifi/wpa_supplicant.conf \
+    $(LOCAL_PATH)/wpa_supplicant.conf:data/misc/wifi/wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.startablet.rc:root/init.startablet.rc \
     $(LOCAL_PATH)/init.startablet.usb.rc:root/init.startablet.usb.rc \
     $(LOCAL_PATH)/ueventd.startablet.rc:root/ueventd.startablet.rc \
-    $(LOCAL_PATH)/fstab.v909:root/fstab.v909 \
+    $(LOCAL_PATH)/fstab.v909:root/fstab.v909
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
@@ -68,7 +68,6 @@ PRODUCT_COPY_FILES += \
 ## LGE stuffs
 PRODUCT_PACKAGES += \
     LGEServices \
-    audio.primary.startablet \
     libaudioutils \
     bridgeutil \
     libbridges \
@@ -88,7 +87,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.sf.lcd_density=160
+    ro.sf.lcd_density=160
 
 PRODUCT_CHARACTERISTICS := tablet,nosdcard
 
