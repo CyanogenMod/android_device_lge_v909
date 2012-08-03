@@ -68,6 +68,7 @@ PRODUCT_COPY_FILES += \
 ## LGE stuffs
 PRODUCT_PACKAGES += \
     LGEServices \
+    audio.primary.startablet \
     libaudioutils \
     bridgeutil \
     libbridges \
