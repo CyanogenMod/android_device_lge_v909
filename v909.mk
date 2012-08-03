@@ -83,6 +83,9 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs
 
+PRODUCT_PACKAGES += \
+    audio.primary.$(TARGET_BOOTLOADER_BOARD_NAME) 
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
