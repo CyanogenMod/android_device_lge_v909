@@ -13,7 +13,7 @@ drm.service.enabled=1
 keyguard.no_require_sim=yes
 
 dalvik.vm.heapstartsize=5m
-dalvik.vm.heapgrowthlimit=48m
+dalvik.vm.heapgrowthlimit=64m
 dalvik.vm.heapsize=256m
 
 # hold precise GC data, and use SMP
