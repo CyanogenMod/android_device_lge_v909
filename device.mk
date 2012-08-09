@@ -16,18 +16,15 @@
 PREBUILT_PATH := $(LOCAL_PATH)/proprietary
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init.startablet.rc:root/init.startablet.rc \
-    $(LOCAL_PATH)/init.startablet.usb.rc:root/init.startablet.usb.rc \
-    $(LOCAL_PATH)/ueventd.startablet.rc:root/ueventd.startablet.rc \
-    $(LOCAL_PATH)/fstab.v909:root/fstab.v909 \
     $(PREBUILT_PATH)/bin/aleglstream:system/bin/aleglstream \
     $(PREBUILT_PATH)/bin/alvcplayer:system/bin/alvcplayer \
     $(PREBUILT_PATH)/bin/alvcrecorder:system/bin/alvcrecorder \
     $(PREBUILT_PATH)/bin/avp_load:system/bin/avp_load \
-    $(PREBUILT_PATH)/bin/brcm_patchram_plus_lge:system/bin/brcm_patchram_plus_lge \
     $(PREBUILT_PATH)/bin/bdaddr_init:system/bin/bdaddr_init \
     $(PREBUILT_PATH)/bin/bluetoothd:system/bin/bluetoothd \
     $(PREBUILT_PATH)/bin/bluetoothhiddend:system/bin/bluetoothhiddend \
+    $(PREBUILT_PATH)/bin/brcm_patchram_plus:system/bin/brcm_patchram_plus \
+    $(PREBUILT_PATH)/bin/brcm_patchram_plus_lge:system/bin/brcm_patchram_plus_lge \
     $(PREBUILT_PATH)/bin/cal_test_only:system/bin/cal_test_only \
     $(PREBUILT_PATH)/bin/clear-kernel-log:system/bin/clear-kernel-log \
     $(PREBUILT_PATH)/bin/etalog:system/bin/etalog \
@@ -39,20 +36,22 @@ PRODUCT_COPY_FILES += \
     $(PREBUILT_PATH)/bin/lgesystemd:system/bin/lgesystemd \
     $(PREBUILT_PATH)/bin/lg_golden_test:system/bin/lg_golden_test \
     $(PREBUILT_PATH)/bin/lg_init_calibration:system/bin/lg_init_calibration \
+    $(PREBUILT_PATH)/bin/Morningcall:system/bin/Morningcall \
     $(PREBUILT_PATH)/bin/motion:system/bin/motion \
     $(PREBUILT_PATH)/bin/multiplayer:system/bin/multiplayer \
-    $(PREBUILT_PATH)/bin/nv_hciattach:system/bin/nv_hciattach \
     $(PREBUILT_PATH)/bin/nvcpud:system/bin/nvcpud \
     $(PREBUILT_PATH)/bin/nvdmmultidisplay:system/bin/nvdmmultidisplay \
+    $(PREBUILT_PATH)/bin/nv_hciattach:system/bin/nv_hciattach \
     $(PREBUILT_PATH)/bin/nvtest:system/bin/nvtest \
     $(PREBUILT_PATH)/bin/omxplayer2:system/bin/omxplayer2 \
+    $(PREBUILT_PATH)/bin/omx_tests:system/bin/omx_tests \
     $(PREBUILT_PATH)/bin/tegrastats:system/bin/tegrastats \
     $(PREBUILT_PATH)/bin/wifihiddend:system/bin/wifihiddend \
     $(PREBUILT_PATH)/bin/wl:system/bin/wl \
     $(PREBUILT_PATH)/bin/write_lgit_val:system/bin/write_lgit_val \
     $(PREBUILT_PATH)/etc/audio_policy.conf:system/etc/audio_policy.conf \
+    $(PREBUILT_PATH)/etc/init.goldfish.sh:system/etc/init.goldfish.sh \
     $(PREBUILT_PATH)/etc/media_codecs.xml:system/etc/media_codecs.xml \
-    $(PREBUILT_PATH)/etc/media_profiles.xml:system/etc/media_profiles.xml \
     $(PREBUILT_PATH)/etc/nvcamera.conf:system/etc/nvcamera.conf \
     $(PREBUILT_PATH)/etc/save_kernel_log.sh:system/etc/save_kernel_log.sh \
     $(PREBUILT_PATH)/etc/vold.conf:system/etc/vold.conf \
@@ -85,6 +84,7 @@ PRODUCT_COPY_FILES += \
     $(PREBUILT_PATH)/etc/firmware/nvmm_mpeg4dec.axf:system/etc/firmware/nvmm_mpeg4dec.axf \
     $(PREBUILT_PATH)/etc/firmware/nvmm_reference.axf:system/etc/firmware/nvmm_reference.axf \
     $(PREBUILT_PATH)/etc/firmware/nvmm_service.axf:system/etc/firmware/nvmm_service.axf \
+    $(PREBUILT_PATH)/etc/firmware/nvmm_sorensondec.axf:system/etc/firmware/nvmm_sorensondec.axf \
     $(PREBUILT_PATH)/etc/firmware/nvmm_vc1dec_2x.axf:system/etc/firmware/nvmm_vc1dec_2x.axf \
     $(PREBUILT_PATH)/etc/firmware/nvmm_vc1dec.axf:system/etc/firmware/nvmm_vc1dec.axf \
     $(PREBUILT_PATH)/etc/firmware/nvmm_wavdec.axf:system/etc/firmware/nvmm_wavdec.axf \
@@ -98,10 +98,8 @@ PRODUCT_COPY_FILES += \
     $(PREBUILT_PATH)/etc/firmware/nvrm_avp_eff00000.bin:system/etc/firmware/nvrm_avp_eff00000.bin \
     $(PREBUILT_PATH)/etc/firmware/transport_stress.axf:system/etc/firmware/transport_stress.axf \
     $(PREBUILT_PATH)/etc/spn-conf.xml:system/etc/spn-conf.xml \
-    $(PREBUILT_PATH)/etc/sound/tiny_hw.xml:system/etc/sound/tiny_hw.xml \
     $(PREBUILT_PATH)/etc/wifi/config:system/etc/wifi/config \
     $(PREBUILT_PATH)/etc/wifi/nvram.txt:system/etc/wifi/nvram.txt \
-    $(PREBUILT_PATH)/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     $(PREBUILT_PATH)/lib/lge-ril.so:system/lib/lge-ril.so \
     $(PREBUILT_PATH)/lib/libardrv_dynamic.so:system/lib/libardrv_dynamic.so \
     $(PREBUILT_PATH)/lib/libbcmwl.so:system/lib/libbcmwl.so \
@@ -183,8 +181,7 @@ PRODUCT_COPY_FILES += \
     $(PREBUILT_PATH)/lib/hw/hwcomposer.tegra.so:system/lib/hw/hwcomposer.tegra.so \
     $(PREBUILT_PATH)/lib/hw/lights.startablet.so:system/lib/hw/lights.startablet.so \
     $(PREBUILT_PATH)/lib/hw/sensors.startablet.so:system/lib/hw/sensors.startablet.so \
-    $(PREBUILT_PATH)/lib/hw/sensors.tegra.so:system/lib/hw/sensors.tegra.so \
-    $(PREBUILT_PATH)/usr/idc/atmel-maxtouch.idc:system/usr/idc/atmel-maxtouch.idc
+    $(PREBUILT_PATH)/lib/hw/sensors.tegra.so:system/lib/hw/sensors.tegra.so
 
 PRODUCT_COPY_FILES += \
     system/core/rootdir/init.trace.rc:root/init.trace.rc \
