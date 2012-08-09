@@ -34,7 +34,7 @@ on init
     chown system system /sys/devices/platform/tegra_displaytest/control
     chmod 0644 /sys/devices/platform/tegra_displaytest/control
     chown system system /sys/devices/platform/tegra_leds/led_rgb_brightness
-chmod 0644 /sys/devices/platform/tegra_leds/led_rgb_brightness
+    chmod 0644 /sys/devices/platform/tegra_leds/led_rgb_brightness
     chown system system /sys/devices/platform/tegra_leds/led_blink
     chmod 0644 /sys/devices/platform/tegra_leds/led_blink
     chown system system /sys/devices/platform/tegra-i2c.1/i2c-1/1-0023/ledstate
