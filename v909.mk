@@ -58,6 +58,7 @@ PRODUCT_PACKAGES += \
     libaudioutils \
     libtinyalsa \
     audio.primary.startablet \
+    lights.startablet \
     secureclockd \
     libsecureclock \
     screencap \
