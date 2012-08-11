@@ -22,5 +22,6 @@ dalvik.vm.dexopt-flags=m=y,u=n
 # GSM, WCDMA preferred
 # This appears to be causing "Unknown" network type
 #ro.telephony.default_network=0
+ro.telephony.ignore.linkiperror=true
 
 ro.sf.lcd_density=160
