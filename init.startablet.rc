@@ -286,9 +286,3 @@ on property:persist.service.events.enable=1
 on property:persist.service.events.enable=0
     stop logcat-events
 # End of Logging service
-
-# Start RescueStarter for Rescue+Mobile (tmus only)
-service RescueStarter /system/bin/RescueStarter
-    class late_start
-    user root
-    group input graphics
