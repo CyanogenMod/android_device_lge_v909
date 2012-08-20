@@ -24,6 +24,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.startablet.usb.rc:root/init.startablet.usb.rc \
     $(LOCAL_PATH)/ueventd.startablet.rc:root/ueventd.startablet.rc \
     $(LOCAL_PATH)/fstab.v909:root/fstab.v909 \
+    $(LOCAL_PATH)/vold.fstab:system/etc/vold.fstab
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
