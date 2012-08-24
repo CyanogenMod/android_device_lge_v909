@@ -91,7 +91,7 @@ WIFI_DRIVER_FW_PATH_STA := "/system/vendor/firmware/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_AP  := "/system/vendor/firmware/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_P2P := "/system/vendor/firmware/fw_bcmdhd_p2p.bin"
 WIFI_DRIVER_MODULE_NAME := "bcmdhd"
-WIFI_DRIVER_MODULE_ARG  := "firmware_path=/system/vendor/firmware/fw_bcmdhd.bin nvram_path=/system/etc/wifi/nvram.txt"
+WIFI_DRIVER_MODULE_ARG  := "iface_name=wlan0 firmware_path=/system/vendor/firmware/fw_bcmdhd.bin nvram_path=/system/etc/wifi/nvram.txt"
 WIFI_BAND := 802_11_BG
 #WIFI_DRIVER_HAS_LGE_SOFTAP	:= true
 
