@@ -45,6 +45,8 @@
       <value>816000</value>  <!-- 816 MHz -->
       <value>912000</value>  <!-- 912 MHz -->
       <value>1000000</value> <!--   1 GHz -->
+      <value>1200000</value> <!--   1.2 GHz -->
+      <value>1400000</value> <!--   1.4 GHz -->
   </array>
   <!-- Power consumption when CPU is idle -->
   <item name="cpu.idle">3.8</item>
@@ -59,6 +61,8 @@
       <value>138</value> <!-- 816 MHz -->
       <value>142</value> <!-- 912 MHz -->
       <value>148</value> <!--   1 GHz -->
+      <value>154</value> <!-- 1.2 GHz -->
+      <value>160</value> <!-- 1.4 GHz -->
   </array>
   <!-- This is the battery capacity in mAh -->
   <item name="battery.capacity">3200</item>
