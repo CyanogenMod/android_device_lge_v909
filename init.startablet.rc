@@ -229,6 +229,17 @@ service lgesystemd /system/bin/lgesystemd
 service eventd /system/bin/eventd
     class late_start
 
+# Recovery daemon: configure MSC partition
+service recoveryd /system/bin/recoveryd /dev/block/mmcblk0p5
+    disabled
+    class main
+    user root
+    group root
+    oneshot
+ 
+on property:sys.shutdown.requested=1recovery
+    start recoveryd
+
 # bugreport is triggered by the VOLUME-DOWN and VOLUME-UP keys
 service bugreport /system/bin/bugmailer.sh -b /system/media/audio/ui/Dock.ogg -e /system/media/audio/ui/Undock.ogg
     class main

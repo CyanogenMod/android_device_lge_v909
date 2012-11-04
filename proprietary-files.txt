@@ -17,6 +17,7 @@ bin/motion
 bin/nv_hciattach
 bin/nvtest
 bin/pppd
+bin/recoveryd
 bin/wifihiddend
 bin/wl
 etc/init.goldfish.sh
