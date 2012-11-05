@@ -34,7 +34,6 @@ lib/hw/sensors.startablet.so
 lib/lge-ril.so
 lib/libbcmwl.so
 lib/libblueset.so
-lib/libcamera.so
 lib/libcgdrv.so
 lib/drm/libdrmwvmplugin.so
 lib/libdrm1.so
