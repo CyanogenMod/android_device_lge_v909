@@ -38,6 +38,9 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/audio_policy.conf::/system/etc/audio_policy.conf \
      $(LOCAL_PATH)/tiny_hw.xml:/system/etc/sound/v909.xml
 
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/nvcamera.conf::/system/etc/nvcamera.conf
+
 PRODUCT_PROPERTY_OVERRIDES := \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=15
